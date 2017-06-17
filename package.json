@@ -2,6 +2,7 @@
   "name": "fcc-quote-machine",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hkwu.github.io/fcc-quote-machine",
   "dependencies": {
     "bulma": "^0.4.2",
     "classnames": "^2.2.5",
@@ -19,12 +20,15 @@
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.1.0",
+    "gh-pages": "^1.0.0",
     "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
