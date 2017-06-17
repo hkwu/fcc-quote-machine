@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { getNewQuote } from '../actions/QuoteActions';
+import { fetchNewQuote } from '../actions/QuoteActions';
 import QuotePanel from '../components/QuotePanel';
 
-function QuotePanelContainer({ getNewQuote, ...rest }) {
-  return <QuotePanel newQuoteHandler={getNewQuote} {...rest} />;
+function QuotePanelContainer({ fetchNewQuote, ...rest }) {
+  return <QuotePanel newQuoteHandler={fetchNewQuote} {...rest} />;
 }
 
 export default connect(
@@ -17,5 +17,5 @@ export default connect(
       isLoading,
     };
   },
-  { getNewQuote },
+  { fetchNewQuote },
 )(QuotePanelContainer);
