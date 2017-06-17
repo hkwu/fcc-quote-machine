@@ -6,15 +6,10 @@ function getNewQuote() {
   };
 }
 
-function receiveNewQuote(quoteData) {
-  const { text, author } = quoteData;
-
+function receiveNewQuote(payload) {
   return {
     type: Actions.RECEIVE_NEW_QUOTE,
-    payload: {
-      text,
-      author,
-    },
+    payload,
   };
 }
 
